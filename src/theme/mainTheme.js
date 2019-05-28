@@ -1,5 +1,6 @@
 export const theme = {
   notes: 'hsl(49, 100%, 58%)',
+  firms: 'hsl(196, 83%, 15%)',
   twitters: 'hsl(196, 83%, 75%)',
   articles: 'hsl(106, 47%, 64%)',
   grey100: 'hsl(0, 0%, 96%)',

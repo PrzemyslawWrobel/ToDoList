@@ -52,7 +52,16 @@ const StyledImage = styled.img`
   border-radius: 50%;
 `;
 
-const DetailsTemplate = ({ pageType, title, created, content, articleUrl, twitterName }) => (
+const DetailsTemplate = ({
+  pageType,
+  title,
+  created,
+  content,
+  articleUrl,
+  twitterName,
+  // firmName,
+  firmUrl,
+}) => (
   <UserPageTemplate pageType={pageType}>
     <StyledWrapper>
       <StyledPageHeader>
@@ -66,6 +75,7 @@ const DetailsTemplate = ({ pageType, title, created, content, articleUrl, twitte
       {pageType === 'twitters' && (
         <StyledImage alt={title} src={`https://avatars.io/twitter/${twitterName}`} />
       )}
+      {pageType === 'firms' && <StyledLink href={firmUrl}>Open article</StyledLink>}
       <Button as={Link} to={`/${pageType}`} activecolor={pageType}>
         save / close
       </Button>
@@ -79,7 +89,9 @@ DetailsTemplate.propTypes = {
   created: PropTypes.string,
   content: PropTypes.string,
   articleUrl: PropTypes.string,
+  firmUrl: PropTypes.string,
   twitterName: PropTypes.string,
+  // firmName: PropTypes.string,
 };
 
 DetailsTemplate.defaultProps = {
@@ -88,6 +100,8 @@ DetailsTemplate.defaultProps = {
   content: '',
   articleUrl: '',
   twitterName: '',
+  // firmName: '',
+  firmUrl: '',
 };
 
 export default DetailsTemplate;

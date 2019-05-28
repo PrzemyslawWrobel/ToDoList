@@ -21,6 +21,9 @@ class DetailsPage extends Component {
       case routes.article:
         this.setState({ pageType: 'articles' });
         break;
+      case routes.firms:
+        this.setState({ pageType: 'firms' });
+        break;
       default:
         console.log('Something went wrong with matching paths');
     }

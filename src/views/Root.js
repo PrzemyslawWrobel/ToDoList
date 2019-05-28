@@ -8,6 +8,7 @@ import Notes from 'views/Notes';
 import Articles from 'views/Articles';
 import Twitters from 'views/Twitters';
 import DetailsPage from 'views/DetailsPage';
+import Firms from 'views/Firms';
 
 const Root = () => (
   <Provider store={store}>
@@ -21,6 +22,8 @@ const Root = () => (
           <Route path={routes.article} component={DetailsPage} />
           <Route exact path={routes.twitters} component={Twitters} />
           <Route path={routes.twitter} component={DetailsPage} />
+          <Route exact path={routes.firms} component={Firms} />
+          <Route path={routes.firms} component={DetailsPage} />
         </Switch>
       </MainTemplate>
     </BrowserRouter>

@@ -58,13 +58,16 @@ const Sidebar = ({ pageType }) => (
       <li>
         <ButtonIcon as={NavLink} to="/articles" icon={bulbIcon} activeclass="active" />
       </li>
+      <li>
+        <ButtonIcon as={NavLink} to="/firms" icon={bulbIcon} activeclass="active" />
+      </li>
     </StyledLinksList>
     <StyledLogoutButton as={NavLink} to="/login" icon={logoutIcon} />
   </StyledWrapper>
 );
 
 Sidebar.propTypes = {
-  pageType: PropTypes.oneOf(['notes', 'twitters', 'articles']),
+  pageType: PropTypes.oneOf(['notes', 'twitters', 'articles', 'firms']),
 };
 
 Sidebar.defaultProps = {
